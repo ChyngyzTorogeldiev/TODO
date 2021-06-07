@@ -1,9 +1,9 @@
-from django.http.response import HttpResponseRedirect
+from django.http.response import HttpResponse
 from django.shortcuts import render, HttpResponse
 
 
 def homepage(request):
-    return HttpResponse("hello world!")
+    return render(request, "index.html")
 
 def test(request):
     return render(request, "test.html")
